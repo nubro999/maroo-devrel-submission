@@ -15,6 +15,6 @@
 | AI 가속 2개 이상·오류 수정 | [AI Usage](../SUBMISSION_NOTES.md#ai-usage) | 완료 |
 | 개발 편의 개선 3개 이상·근거·담당 영역 | [DX Feedback](../SUBMISSION_NOTES.md#dx-feedback) | 3개 포함 |
 | 영상 5–8분 | [영상 상태](../video-link.md) | 링크 등록·외부 접근 권한 확인, 길이 약 5분은 지원자 확인 |
-| 슬라이드 | [발표 자료](https://docs.google.com/presentation/d/12lcnMRimrosbLEd8PpE40ZvFPl7kivfFuo4TcTB2CXc/edit) | 자료 완료, 외부 열람 권한 확인 필요 |
+| 슬라이드 | [발표 자료](https://docs.google.com/presentation/d/12lcnMRimrosbLEd8PpE40ZvFPl7kivfFuo4TcTB2CXc/edit) | 자료 완료, 외부 뷰어 권한 확인 |
 
 이 표의 완료는 문서·실행 범위에 한정합니다. 운영 보안 감사·Maroo 테스트넷의 정상 비공개 지급·감사자의 거래 정보 열람은 완료를 주장하지 않습니다.

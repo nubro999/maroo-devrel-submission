@@ -42,6 +42,6 @@ npm test
 
 검증 환경은 Ubuntu 24.04 / WSL2, Node 22.14.0입니다. Clairveil 소스는 `af04cfc994a3da87a8b1b902eda0988feb512539`로 고정했습니다. 최근 참가자 실행은 Node 24.15.0의 터미널 출력과 거래 7건의 재조회로 확인했습니다. 이 실행은 핵심 코드를 주석 처리하기 전 버전이며, 최종 실습 파일은 거래를 보내지 않는 검사로 확인했습니다.
 
-## 남은 제출 항목
+## 제출 상태와 한계
 
-영상 링크는 등록했습니다. Google Slides의 외부 열람 권한 설정이 남아 있습니다. macOS 실기기 실행과 전체 70분 참가자 리허설은 미검증입니다. 상세 범위는 [Known Limitations](SUBMISSION_NOTES.md#known-limitations)에 있습니다.
+영상과 슬라이드 링크를 등록했으며, 두 자료 모두 링크가 있는 사용자의 열람 권한을 확인했습니다. macOS 실기기 실행과 전체 70분 참가자 리허설은 미검증입니다. 상세 범위는 [Known Limitations](SUBMISSION_NOTES.md#known-limitations)에 있습니다.
