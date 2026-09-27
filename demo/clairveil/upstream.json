@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/DELIGHT-LABS/clairveil",
+  "commit": "af04cfc994a3da87a8b1b902eda0988feb512539",
+  "recordedAt": "2026-09-25T17:52:57.671Z",
+  "purpose": "source-inspection-and-local-reference-validation",
+  "localFlowExecuted": true,
+  "marooCompatibility": "unverified",
+  "license": "Apache-2.0",
+  "localEvidence": "evidence/local/LOCAL_PRIVACY_LIFECYCLE.json"
+}

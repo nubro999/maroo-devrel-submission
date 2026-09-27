@@ -1,0 +1,19 @@
+{
+  "label": "Local",
+  "result": "PASS",
+  "path": "manual CLI",
+  "artifactReuse": true,
+  "alice": "3",
+  "bob": "7",
+  "repeatScanStable": true,
+  "transactions": [
+    {
+      "hash": "D51584EA8570EB4AB8D733B04FD845BF32DDE398AD288443712E98A99A6F650A",
+      "code": 0
+    },
+    {
+      "hash": "A468B842A48006E197E6688CF0BFE0D79DC131853C9FBBA7FE518C8F09D6CD1F",
+      "code": 0
+    }
+  ]
+}

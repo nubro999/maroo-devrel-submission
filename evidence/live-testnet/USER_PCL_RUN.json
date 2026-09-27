@@ -1,0 +1,216 @@
+{
+  "label": "Live Testnet",
+  "chainId": 450815,
+  "started": "2026-09-27T09:19:49.300Z",
+  "steps": [
+    {
+      "step": "deploy-implementation",
+      "phase": "submitted",
+      "hash": "0x4c81cf2f28382a6c444707d5912046639b1e43060ad6d0ca15b48c09bca6cc5b"
+    },
+    {
+      "step": "deploy-implementation",
+      "phase": "included",
+      "hash": "0x4c81cf2f28382a6c444707d5912046639b1e43060ad6d0ca15b48c09bca6cc5b",
+      "status": 1,
+      "block": 19229677,
+      "fee": "2.838735",
+      "logs": []
+    },
+    {
+      "step": "deploy-pcl-proxy",
+      "phase": "submitted",
+      "hash": "0xb0cf348c8b44afa5fed24559d597442167007b401d90419833adc80aacac5bb0"
+    },
+    {
+      "step": "deploy-pcl-proxy",
+      "phase": "included",
+      "hash": "0xb0cf348c8b44afa5fed24559d597442167007b401d90419833adc80aacac5bb0",
+      "status": 1,
+      "block": 19229680,
+      "fee": "11.644209",
+      "logs": [
+        {
+          "name": "PclProxyDeployed",
+          "args": [
+            "0xA2C2517c26503A31a4A6aD54402f6eDEbfA0184a",
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": "registry",
+      "kind": "1",
+      "admin": "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+      "proxy": "0xA2C2517c26503A31a4A6aD54402f6eDEbfA0184a"
+    },
+    {
+      "step": "allow-policy",
+      "phase": "submitted",
+      "hash": "0x6cf78a217bd3bf552ceec8f71b58ae369a30ce6f7c976e0eab95f9c5190b60e1"
+    },
+    {
+      "step": "allow-policy",
+      "phase": "included",
+      "hash": "0x6cf78a217bd3bf552ceec8f71b58ae369a30ce6f7c976e0eab95f9c5190b60e1",
+      "status": 1,
+      "block": 19229683,
+      "fee": "0.898119",
+      "logs": [
+        {
+          "name": "ContractPoliciesChanged",
+          "args": [
+            "0xA2C2517c26503A31a4A6aD54402f6eDEbfA0184a",
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            [
+              [
+                "DENYLIST_POLICY",
+                "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000",
+                "0x0c11dedd"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "step": "normal-payment",
+      "phase": "submitted",
+      "hash": "0x44f86768832c69fc4bc5998d4926c48b52783c5a5e64391fbc60fe81427c9abd"
+    },
+    {
+      "step": "normal-payment",
+      "phase": "included",
+      "hash": "0x44f86768832c69fc4bc5998d4926c48b52783c5a5e64391fbc60fe81427c9abd",
+      "status": 1,
+      "block": 19229687,
+      "fee": "2.807118",
+      "logs": [
+        {
+          "name": "PolicyCheckPassed",
+          "args": [
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            "0xA2C2517c26503A31a4A6aD54402f6eDEbfA0184a"
+          ]
+        }
+      ]
+    },
+    {
+      "step": "normal-payment-verification",
+      "recipientDelta": "1000000000000000",
+      "paymentCount": "1"
+    },
+    {
+      "step": "block-sender-policy",
+      "phase": "submitted",
+      "hash": "0xbbc7bc558cc3faaed967fa0635a1d2004062a982153f243f29e3717c3c91c6e6"
+    },
+    {
+      "step": "block-sender-policy",
+      "phase": "included",
+      "hash": "0xbbc7bc558cc3faaed967fa0635a1d2004062a982153f243f29e3717c3c91c6e6",
+      "status": 1,
+      "block": 19229690,
+      "fee": "0.940347",
+      "logs": [
+        {
+          "name": "ContractPoliciesChanged",
+          "args": [
+            "0xA2C2517c26503A31a4A6aD54402f6eDEbfA0184a",
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            [
+              [
+                "DENYLIST_POLICY",
+                "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000001000000000000000000000000c4a50f04b3eb7b95f87639d6133db89e3cdc407c",
+                "0x0c11dedd"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "step": "blocked-preflight",
+      "code": "CALL_EXCEPTION",
+      "message": "execution reverted (unknown custom error)",
+      "decoded": {
+        "name": "InDenylist",
+        "args": [
+          "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C"
+        ]
+      },
+      "rpcMessage": "execution reverted"
+    },
+    {
+      "step": "blocked-payment-submission",
+      "phase": "submitted",
+      "hash": "0xc879a3cbbf7061a54526f80443c9f759e10ecc9de7a6025ca95833756307648a"
+    },
+    {
+      "step": "blocked-payment-submission",
+      "phase": "included",
+      "hash": "0xc879a3cbbf7061a54526f80443c9f759e10ecc9de7a6025ca95833756307648a",
+      "status": 0,
+      "block": 19229692,
+      "fee": "2.25",
+      "logs": []
+    },
+    {
+      "step": "blocked-state",
+      "recipientDelta": "0",
+      "countBefore": "1",
+      "countAfter": "1"
+    },
+    {
+      "step": "restore-allow-policy",
+      "phase": "submitted",
+      "hash": "0xfda88e63b56c2f285fb6116a62668694664c157b008357fa1b3356a0c0d94bc1"
+    },
+    {
+      "step": "restore-allow-policy",
+      "phase": "included",
+      "hash": "0xfda88e63b56c2f285fb6116a62668694664c157b008357fa1b3356a0c0d94bc1",
+      "status": 1,
+      "block": 19229694,
+      "fee": "0.920835",
+      "logs": [
+        {
+          "name": "ContractPoliciesChanged",
+          "args": [
+            "0xA2C2517c26503A31a4A6aD54402f6eDEbfA0184a",
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            [
+              [
+                "DENYLIST_POLICY",
+                "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000",
+                "0x0c11dedd"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "step": "direct-implementation",
+      "rejected": true,
+      "code": "CALL_EXCEPTION",
+      "message": "execution reverted: \"proxy only\"",
+      "decoded": {
+        "name": "Error",
+        "args": [
+          "proxy only"
+        ]
+      },
+      "rpcMessage": "execution reverted: proxy only"
+    }
+  ],
+  "sender": "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+  "recipient": "0xA7B22eA2a4203E10F955b0FE5C52fBA5A96A4edA",
+  "implementation": "0x98d3F43a1a9c1624a11d9DD64cF4B63DBde06d47",
+  "proxy": "0xA2C2517c26503A31a4A6aD54402f6eDEbfA0184a",
+  "restored": true,
+  "passed": true,
+  "totalFeeTOKRW": "22.299363"
+}

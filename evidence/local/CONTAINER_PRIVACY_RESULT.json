@@ -1,0 +1,74 @@
+{
+  "label": "Local",
+  "result": "PASS",
+  "timestamp": "2026-09-27T11:15:02.536696+00:00",
+  "commit": "af04cfc994a3da87a8b1b902eda0988feb512539",
+  "chainId": "devrel-local-1",
+  "artifactKind": "development only",
+  "marooCompatibilityVerified": false,
+  "deposit": {
+    "hash": "DD8B8D9F271B62C8049E0D4799615587490CAE3C9A164ED57D66323013CECA4D",
+    "height": "3",
+    "code": 0,
+    "gasUsed": "2794971",
+    "eventTypes": [
+      "coin_received",
+      "coin_spent",
+      "deposit",
+      "message",
+      "transfer",
+      "tx"
+    ]
+  },
+  "preparation": [
+    {
+      "hash": "DDD26C65C04FA6BA78DE929AF7CAA35F6E2AB452DA62F762FD6AB995722C7852",
+      "height": "21",
+      "code": 0,
+      "gasUsed": "7606038",
+      "eventTypes": [
+        "batch_transfer",
+        "message",
+        "tx"
+      ]
+    }
+  ],
+  "transfer": {
+    "hash": "5600CEE8DD1900217361DD118F2AA09D2CAE96E629A12B6993A7C2F8D5945A5A",
+    "height": "25",
+    "code": 0,
+    "gasUsed": "3449340",
+    "eventTypes": [
+      "message",
+      "shielded_transfer",
+      "tx"
+    ]
+  },
+  "walletSummaries": {
+    "aliceBefore": {
+      "total_spendable": "10",
+      "spendable_count": 1,
+      "spent_count": 0,
+      "total_count": 1
+    },
+    "aliceAfter": {
+      "total_spendable": "3",
+      "spendable_count": 1,
+      "spent_count": 3,
+      "total_count": 4
+    },
+    "bobBefore": {
+      "total_spendable": "0",
+      "spendable_count": 0,
+      "spent_count": 0,
+      "total_count": 0
+    },
+    "bobAfter": {
+      "total_spendable": "7",
+      "spendable_count": 1,
+      "spent_count": 0,
+      "total_count": 1
+    }
+  },
+  "repeatScanStable": true
+}

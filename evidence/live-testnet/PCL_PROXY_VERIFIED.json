@@ -1,0 +1,38 @@
+{
+  "normal-payment": {
+    "hash": "0xebc1c13aca434e747041db34e1bb3ef8f81bc538a0d15c68611aa60a88221eb0",
+    "to": "0x88efE0F72e5C095FE98a925682692D7787B5062F",
+    "status": 1,
+    "block": 19180952,
+    "gasLimit": "405589",
+    "gasUsed": "311992",
+    "recipientDelta": "1000000000000000"
+  },
+  "blocked-payment-submission": {
+    "hash": "0xa365d1866e419ed9a8d8ac635bbaf0ef2ed94900c70ff83d18fcadd84556628c",
+    "to": "0x88efE0F72e5C095FE98a925682692D7787B5062F",
+    "status": 0,
+    "block": 19180957,
+    "gasLimit": "500000",
+    "gasUsed": "250000",
+    "recipientDelta": "0",
+    "historicalError": {
+      "name": "InDenylist",
+      "args": [
+        "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C"
+      ]
+    }
+  },
+  "finalPolicy": {
+    "_contract": "0x88efE0F72e5C095FE98a925682692D7787B5062F",
+    "admin": "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+    "policies": {
+      "_": {
+        "templateId": "DENYLIST_POLICY",
+        "policy": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000",
+        "selector": "0x0c11dedd"
+      }
+    }
+  },
+  "paymentCount": "1"
+}

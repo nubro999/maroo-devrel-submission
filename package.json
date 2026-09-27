@@ -1,0 +1,24 @@
+{
+  "name": "maroo-devrel-submission",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.14.0 <25"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "setup:account": "node scripts/setup-account.mjs",
+    "test": "node scripts/validate.mjs",
+    "verify:evidence": "node scripts/verify-evidence.mjs",
+    "secrets:check": "node scripts/check-secrets.mjs"
+  },
+  "dependencies": {
+    "@maroo-chain/contracts": "0.0.9",
+    "ethers": "6.17.0",
+    "solc": "0.8.28"
+  },
+  "overrides": {
+    "tmp": "0.2.7"
+  }
+}

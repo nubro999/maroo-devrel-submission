@@ -1,0 +1,366 @@
+{
+  "started": "2026-09-26T20:01:54.494Z",
+  "label": "Live Testnet",
+  "chainId": 450815,
+  "proxy": "0x88efE0F72e5C095FE98a925682692D7787B5062F",
+  "issuer": "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+  "subject": "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+  "limitation": "Self-issued workshop demo credential, not KYC/KYB or the existing Privacy credential",
+  "steps": [
+    {
+      "step": "register-demo-schema",
+      "phase": "submitted",
+      "hash": "0x4d77102261d6729ef42bd5f464ef9f764cf34cf5968842d91302eb94ff369e36"
+    },
+    {
+      "step": "register-demo-schema",
+      "phase": "included",
+      "hash": "0x4d77102261d6729ef42bd5f464ef9f764cf34cf5968842d91302eb94ff369e36",
+      "status": 1,
+      "block": 19182500,
+      "events": []
+    },
+    {
+      "step": "bind-eas-policy",
+      "phase": "submitted",
+      "hash": "0xd57d0f239bcf25f2d8ddd6c697fadbf82a930ced7e0ce37feabf7155585fc6bd"
+    },
+    {
+      "step": "bind-eas-policy",
+      "phase": "included",
+      "hash": "0xd57d0f239bcf25f2d8ddd6c697fadbf82a930ced7e0ce37feabf7155585fc6bd",
+      "status": 1,
+      "block": 19182502,
+      "events": [
+        {
+          "name": "ContractPoliciesChanged",
+          "args": [
+            "0x88efE0F72e5C095FE98a925682692D7787B5062F",
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            [
+              [
+                "EAS_POLICY",
+                "0x000000000000000000000000100000000000000000000000000000000000000700000000000000000000000010000000000000000000000000000000000000085afc913a096dfdf97709f4e28643b378bac2c827e86a6349dd0d661565b6cede",
+                "0x0c11dedd"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "step": "missing-credential",
+      "code": "CALL_EXCEPTION",
+      "message": "execution reverted (unknown custom error)",
+      "decoded": {
+        "name": "EasNoAttestationReceived",
+        "args": [
+          "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C"
+        ]
+      }
+    },
+    {
+      "step": "missing-credential-broadcast",
+      "phase": "submitted",
+      "hash": "0x207e82d298f8221ea5ad54ff3c76d361b9d26fdf980e5b0181cbb7601581365c"
+    },
+    {
+      "step": "missing-credential-broadcast",
+      "phase": "included",
+      "hash": "0x207e82d298f8221ea5ad54ff3c76d361b9d26fdf980e5b0181cbb7601581365c",
+      "status": 0,
+      "block": 19182504,
+      "events": []
+    },
+    {
+      "step": "missing-credential-state",
+      "recipientDelta": "0",
+      "countBefore": "2",
+      "countAfter": "2"
+    },
+    {
+      "step": "issue-false",
+      "phase": "submitted",
+      "hash": "0x89906f812457ae533aca714534087854ed3f7bf5d67b99039329f0866c2a56aa"
+    },
+    {
+      "step": "issue-false",
+      "phase": "included",
+      "hash": "0x89906f812457ae533aca714534087854ed3f7bf5d67b99039329f0866c2a56aa",
+      "status": 1,
+      "block": 19182507,
+      "events": [
+        {
+          "name": "Attested",
+          "args": [
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            "0x5a36cb9a792e9e61bef5d68556f5b63a3cb787e2b8d8452e15cf2ad32f86da41",
+            "0x5afc913a096dfdf97709f4e28643b378bac2c827e86a6349dd0d661565b6cede"
+          ]
+        }
+      ]
+    },
+    {
+      "step": "readback-false",
+      "uid": "0x5a36cb9a792e9e61bef5d68556f5b63a3cb787e2b8d8452e15cf2ad32f86da41",
+      "decodedBoolean": false,
+      "attestation": {
+        "uid": "0x5a36cb9a792e9e61bef5d68556f5b63a3cb787e2b8d8452e15cf2ad32f86da41",
+        "schema": "0x5afc913a096dfdf97709f4e28643b378bac2c827e86a6349dd0d661565b6cede",
+        "time": "1790452924",
+        "expirationTime": "1790456521",
+        "revocationTime": "0",
+        "refUID": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "recipient": "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+        "attester": "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+        "revocable": true,
+        "data": "0x00000000000000000000000000000000000000000000000000000000000000001328750f8aa856cfaa49c9727559cc415db47b55e769c0116653f2f4355acc9a"
+      }
+    },
+    {
+      "step": "index-false",
+      "phase": "submitted",
+      "hash": "0x2890d156c3374d15776db1b487cc71ff1b80b3c75f4eb019f951aeb4e5f0ebe4"
+    },
+    {
+      "step": "index-false",
+      "phase": "included",
+      "hash": "0x2890d156c3374d15776db1b487cc71ff1b80b3c75f4eb019f951aeb4e5f0ebe4",
+      "status": 1,
+      "block": 19182511,
+      "events": []
+    },
+    {
+      "step": "indexed-false",
+      "indexed": true,
+      "count": "1"
+    },
+    {
+      "step": "false-payment-preflight",
+      "gas": "368464"
+    },
+    {
+      "step": "false-payment",
+      "phase": "submitted",
+      "hash": "0x69f42f10fd795af26af78f717d676b1e6bba05d119e9886e786ffec706afc07b"
+    },
+    {
+      "step": "false-payment",
+      "phase": "included",
+      "hash": "0x69f42f10fd795af26af78f717d676b1e6bba05d119e9886e786ffec706afc07b",
+      "status": 1,
+      "block": 19182515,
+      "events": [
+        {
+          "name": "PolicyCheckPassed",
+          "args": [
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            "0x88efE0F72e5C095FE98a925682692D7787B5062F"
+          ]
+        }
+      ]
+    },
+    {
+      "step": "false-payment-state",
+      "recipientDelta": "1000000000000000",
+      "countBefore": "2",
+      "countAfter": "3"
+    },
+    {
+      "step": "revoke-false",
+      "phase": "submitted",
+      "hash": "0xa0ed3b538728a23075d457bac5decfb1e6342132240b8ae5089131f34b4414d1"
+    },
+    {
+      "step": "revoke-false",
+      "phase": "included",
+      "hash": "0xa0ed3b538728a23075d457bac5decfb1e6342132240b8ae5089131f34b4414d1",
+      "status": 1,
+      "block": 19182518,
+      "events": []
+    },
+    {
+      "step": "revoke-false-readback",
+      "uid": "0x5a36cb9a792e9e61bef5d68556f5b63a3cb787e2b8d8452e15cf2ad32f86da41",
+      "revocationTime": "1790452935"
+    },
+    {
+      "step": "revoked-false",
+      "code": "CALL_EXCEPTION",
+      "message": "execution reverted (unknown custom error)",
+      "decoded": {
+        "name": "EasAttestationRevoked",
+        "args": [
+          "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C"
+        ]
+      }
+    },
+    {
+      "step": "revoked-false-broadcast",
+      "phase": "submitted",
+      "hash": "0x74c73e3884106f16de25b0509ea4d2ad5a2d623fea85c0f193757e59a12d2105"
+    },
+    {
+      "step": "revoked-false-broadcast",
+      "phase": "included",
+      "hash": "0x74c73e3884106f16de25b0509ea4d2ad5a2d623fea85c0f193757e59a12d2105",
+      "status": 0,
+      "block": 19182520,
+      "events": []
+    },
+    {
+      "step": "revoked-false-state",
+      "recipientDelta": "0",
+      "countBefore": "3",
+      "countAfter": "3"
+    },
+    {
+      "step": "issue-true",
+      "phase": "submitted",
+      "hash": "0xce133809be34b40583a392e7d7e53085ab33ebd307225d3cbc4f78989dd11a0f"
+    },
+    {
+      "step": "issue-true",
+      "phase": "included",
+      "hash": "0xce133809be34b40583a392e7d7e53085ab33ebd307225d3cbc4f78989dd11a0f",
+      "status": 1,
+      "block": 19182522,
+      "events": [
+        {
+          "name": "Attested",
+          "args": [
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            "0x5891f4773c49cd3b731e8fd5f4537a34b00d5ca4f7eecb72bc5f1a5901469bef",
+            "0x5afc913a096dfdf97709f4e28643b378bac2c827e86a6349dd0d661565b6cede"
+          ]
+        }
+      ]
+    },
+    {
+      "step": "readback-true",
+      "uid": "0x5891f4773c49cd3b731e8fd5f4537a34b00d5ca4f7eecb72bc5f1a5901469bef",
+      "decodedBoolean": true,
+      "attestation": {
+        "uid": "0x5891f4773c49cd3b731e8fd5f4537a34b00d5ca4f7eecb72bc5f1a5901469bef",
+        "schema": "0x5afc913a096dfdf97709f4e28643b378bac2c827e86a6349dd0d661565b6cede",
+        "time": "1790452939",
+        "expirationTime": "1790456521",
+        "revocationTime": "0",
+        "refUID": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "recipient": "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+        "attester": "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+        "revocable": true,
+        "data": "0x00000000000000000000000000000000000000000000000000000000000000011328750f8aa856cfaa49c9727559cc415db47b55e769c0116653f2f4355acc9a"
+      }
+    },
+    {
+      "step": "index-true",
+      "phase": "submitted",
+      "hash": "0x728457d700442c75bb097b2b22fa2db5c3b4b14b3ebcb485c9cf63e235ff803f"
+    },
+    {
+      "step": "index-true",
+      "phase": "included",
+      "hash": "0x728457d700442c75bb097b2b22fa2db5c3b4b14b3ebcb485c9cf63e235ff803f",
+      "status": 1,
+      "block": 19182524,
+      "events": []
+    },
+    {
+      "step": "indexed-true",
+      "indexed": true,
+      "count": "2"
+    },
+    {
+      "step": "true-payment-preflight",
+      "gas": "370618"
+    },
+    {
+      "step": "true-payment",
+      "phase": "submitted",
+      "hash": "0x9810ab00b4d6ec3dab6accd4aa5e2cb1c435bd1bc75a458bf8f039073b33a917"
+    },
+    {
+      "step": "true-payment",
+      "phase": "included",
+      "hash": "0x9810ab00b4d6ec3dab6accd4aa5e2cb1c435bd1bc75a458bf8f039073b33a917",
+      "status": 1,
+      "block": 19182527,
+      "events": [
+        {
+          "name": "PolicyCheckPassed",
+          "args": [
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            "0x88efE0F72e5C095FE98a925682692D7787B5062F"
+          ]
+        }
+      ]
+    },
+    {
+      "step": "true-payment-state",
+      "recipientDelta": "1000000000000000",
+      "countBefore": "3",
+      "countAfter": "4"
+    },
+    {
+      "step": "cleanup-revoke-true",
+      "phase": "submitted",
+      "hash": "0xea9e34e670ab8e7d8275a79e9a40dc73fc884b25d83e25b0a67874671db99c03"
+    },
+    {
+      "step": "cleanup-revoke-true",
+      "phase": "included",
+      "hash": "0xea9e34e670ab8e7d8275a79e9a40dc73fc884b25d83e25b0a67874671db99c03",
+      "status": 1,
+      "block": 19182531,
+      "events": []
+    },
+    {
+      "step": "cleanup-revoke-true-readback",
+      "uid": "0x5891f4773c49cd3b731e8fd5f4537a34b00d5ca4f7eecb72bc5f1a5901469bef",
+      "revocationTime": "1790452948"
+    },
+    {
+      "step": "restore-original-policy",
+      "phase": "submitted",
+      "hash": "0x851c7591c60d28ed5005ef2e406c1e6654049565c4d69a18e19d3f10c78c7544"
+    },
+    {
+      "step": "restore-original-policy",
+      "phase": "included",
+      "hash": "0x851c7591c60d28ed5005ef2e406c1e6654049565c4d69a18e19d3f10c78c7544",
+      "status": 1,
+      "block": 19182534,
+      "events": [
+        {
+          "name": "ContractPoliciesChanged",
+          "args": [
+            "0x88efE0F72e5C095FE98a925682692D7787B5062F",
+            "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+            [
+              [
+                "DENYLIST_POLICY",
+                "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000",
+                "0x0c11dedd"
+              ]
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "schemaText": "bool workshopDemoEligible, bytes32 booleanComparison1790452915156",
+  "schemaUID": "0x5afc913a096dfdf97709f4e28643b378bac2c827e86a6349dd0d661565b6cede",
+  "expirationTime": "1790456521",
+  "runId": "0x1328750f8aa856cfaa49c9727559cc415db47b55e769c0116653f2f4355acc9a",
+  "falseUID": "0x5a36cb9a792e9e61bef5d68556f5b63a3cb787e2b8d8452e15cf2ad32f86da41",
+  "falsePaymentStatus": 1,
+  "trueUID": "0x5891f4773c49cd3b731e8fd5f4537a34b00d5ca4f7eecb72bc5f1a5901469bef",
+  "truePaymentStatus": 1,
+  "comparisonComplete": true,
+  "booleanTrueRequiredInThisConfiguration": false,
+  "restored": true,
+  "totalFeeTOKRW": "27.114012"
+}

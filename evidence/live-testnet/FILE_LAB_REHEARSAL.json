@@ -1,0 +1,72 @@
+{
+  "label": "Live Testnet",
+  "result": "PASS",
+  "completedSteps": 7,
+  "proxy": "0xEbd4C02f1880837789FC72946fcA5d03F22C4830",
+  "transactions": [
+    {
+      "label": "implementation",
+      "hash": "0x42fb7155f357fe4d11adbfce81f8a5b775eff47493122b8e7b7c937d2a8a1980"
+    },
+    {
+      "label": "proxy",
+      "hash": "0x30fa710ea2d9fc64e59073b896b965df2014c394243e42748306943569c8a151"
+    },
+    {
+      "label": "allow",
+      "hash": "0x7c6169d02192dc08fa5ee85d09f54cdfc4a2aae2f613612a2703b850306ba7cc"
+    },
+    {
+      "label": "allowed-payment",
+      "hash": "0x00b3322342c0fcf113d5833e6100d1efa505988733cfbd7594665911460a787a"
+    },
+    {
+      "label": "deny",
+      "hash": "0x80323ddd670c4b41ee99653b71e67bf5ff5196bb1782c618173b01f972ece49d"
+    },
+    {
+      "label": "denied-payment",
+      "hash": "0x022a0b263b022ee75b76bc6ece42f84143d5c102f5c5f506dae96b445b674f43"
+    },
+    {
+      "label": "restore-allow",
+      "hash": "0xd5e51320306c9e3ad9653ae9e98bcad6de31e390b6177348d296544e95091141"
+    },
+    {
+      "label": "schema",
+      "hash": "0x8afb15da67a21344b4f80fdd955eb0664469efcb8eef9db62efa57fc016c0ec3"
+    },
+    {
+      "label": "bind-eas",
+      "hash": "0x3dad66d94fa0ca0494dfed30d4d335ff0f7a14bee7305b00f8b1ea609d88d8b4"
+    },
+    {
+      "label": "missing-credential",
+      "hash": "0x6a3d056664ee52e877b23e2a62555bf5a69774986b40491d0d2549543080dedb"
+    },
+    {
+      "label": "attest",
+      "hash": "0xd07815af97a1300632026c89017b05578eaf7bcb55bd825359a9e39eda8b768e"
+    },
+    {
+      "label": "index",
+      "hash": "0x790bb12cb5607e25e0f9c7e7e50caf229ab2064ec8fb53f2e63651367d6734f9"
+    },
+    {
+      "label": "credentialed-payment",
+      "hash": "0x9216034038c526ab1c3717e222b7259b5c3c0d1210e3b0cf42fa563e9f531760"
+    },
+    {
+      "label": "revoke",
+      "hash": "0x0d8e97e9138e89de0c3e7e3bc826ea1b7dba6420a326e4e50a2b641f7915e5f0"
+    },
+    {
+      "label": "revoked-payment",
+      "hash": "0xb23f1a9b5a72e1c61fde82a9a75001bc3a61fcc546bf00bf8262e6e92f3bade3"
+    },
+    {
+      "label": "restore-denylist",
+      "hash": "0x9232e2237f9b5b364691b7c923026baef3f7d7a0d4634e661f7b4fcb403d7283"
+    }
+  ]
+}

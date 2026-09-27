@@ -1,0 +1,21 @@
+// Provided transport/compilation only. No policy, deployment or payment runs on import.
+import {readFileSync,appendFileSync,mkdirSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import solc from 'solc';
+import {Wallet,Contract,ContractFactory,Interface,AbiCoder,JsonRpcProvider,FetchRequest,parseEther,ZeroAddress,ZeroHash,id} from 'ethers';
+const require=createRequire(import.meta.url);const {iPclAbi}=require('@maroo-chain/contracts/abi/precompiles/pcl/IPcl');
+export {Contract,ContractFactory,Interface,parseEther,ZeroAddress,ZeroHash,id};
+const request=new FetchRequest('https://rpc-testnet.maroo.io');request.timeout=20000;
+export const provider=new JsonRpcProvider(request,undefined,{batchMaxCount:1,cacheTimeout:-1});
+let configuredWallet;
+try { configuredWallet=new Wallet(process.env.MAROO_PRIVATE_KEY,provider); }
+catch { provider.destroy(); throw Error('계정 설정이 필요합니다. npm run setup:account를 실행한 뒤 파일을 다시 실행하세요.'); }
+export const wallet=configuredWallet;
+export const recipient=process.env.MAROO_RECIPIENT;
+export const coder=AbiCoder.defaultAbiCoder();
+export const pcl=new Contract('0x1000000000000000000000000000000000000005',iPclAbi,wallet);
+export function compile(sourcePath='.private/terminal/Payment.sol'){const out=JSON.parse(solc.compile(JSON.stringify({language:'Solidity',sources:{'Payment.sol':{content:readFileSync(sourcePath,'utf8')}},settings:{evmVersion:'paris',optimizer:{enabled:true,runs:200},outputSelection:{'*':{'*':['abi','evm.bytecode.object']}}}})));if(out.errors?.some(e=>e.severity==='error'))throw Error(out.errors.filter(e=>e.severity==='error').map(e=>e.formattedMessage).join('\n'));return out.contracts['Payment.sol'].WorkshopPayment;}
+let spent=0n,pending=false;
+export async function send(label,tx,gasOverride){if(pending)throw Error('Previous receipt unresolved; inspect saved hash before sending more.');if((await provider.getNetwork()).chainId!==450815n)throw Error('Wrong chain');const gas=gasOverride??(await provider.estimateGas({...tx,from:wallet.address}))*130n/100n;const price=(await provider.getFeeData()).gasPrice;if(!price||spent+gas*price>parseEther('100'))throw Error('Session fee cap exceeded');if(await provider.getBalance(wallet.address)<gas*price+(tx.value??0n))throw Error('Insufficient balance');mkdirSync('.private/terminal',{recursive:true});const sent=await wallet.sendTransaction({...tx,chainId:450815,type:0,gasPrice:price,gasLimit:gas});pending=true;appendFileSync('.private/terminal/transactions.jsonl',JSON.stringify({label,hash:sent.hash})+'\n');console.log(label,sent.hash);let receipt;try{receipt=await sent.wait(1,60000)}catch(e){if(e.receipt)receipt=e.receipt;else throw Error('Receipt not resolved. Inspect '+sent.hash+' before retrying.')}if(!receipt)throw Error('Receipt missing');pending=false;spent+=receipt.fee;console.log('status:',receipt.status,'block:',receipt.blockNumber);return receipt;}
+export function decode(error){const data=error.data??error.info?.error?.data;try{return pcl.interface.parseError(data)?.name??'Unknown custom error'}catch{return error.shortMessage??'Unknown error'}}
+export async function easTools(){const ep=new Contract('0x1000000000000000000000000000000000000009',['function getParams() view returns(tuple(address schemaRegistry,address eas,address indexer))'],provider);const addresses=await ep.getParams();return {addresses,registry:new Contract(addresses.schemaRegistry,['function register(string,address,bool) returns(bytes32)','function getSchema(bytes32) view returns(tuple(bytes32 uid,address resolver,bool revocable,string schema))'],wallet),eas:new Contract(addresses.eas,['function attest(tuple(bytes32 schema,tuple(address recipient,uint64 expirationTime,bool revocable,bytes32 refUID,bytes data,uint256 value) data)) payable returns(bytes32)','function revoke(tuple(bytes32 schema,tuple(bytes32 uid,uint256 value) data)) payable','function getAttestation(bytes32) view returns(tuple(bytes32 uid,bytes32 schema,uint64 time,uint64 expirationTime,uint64 revocationTime,bytes32 refUID,address recipient,address attester,bool revocable,bytes data))','event Attested(address indexed recipient,address indexed attester,bytes32 uid,bytes32 indexed schemaUID)'],wallet),indexer:new Contract(addresses.indexer,['function indexAttestation(bytes32)','function isAttestationIndexed(bytes32) view returns(bool)'],wallet)}};

@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-09-27T13:07:39.249Z",
+  "node": "v22.14.0",
+  "compiler": "0.8.28+commit.7893614a.Emscripten.clang",
+  "bytecodeHash": "0x1d854ad1d5960e191592c171bb59a1bf0c7a6455a3c2e5f8c73353907a4178e6",
+  "bytecodeMatchesPreviouslyExecutedSource": true,
+  "offlineTests": "PASS",
+  "dependencyAudit": "0 vulnerabilities",
+  "newTransactionsSent": false
+}

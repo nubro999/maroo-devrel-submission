@@ -1,0 +1,62 @@
+{
+  "missing-credential-broadcast": {
+    "hash": "0x207e82d298f8221ea5ad54ff3c76d361b9d26fdf980e5b0181cbb7601581365c",
+    "to": "0x88efE0F72e5C095FE98a925682692D7787B5062F",
+    "status": 0,
+    "block": 19182504,
+    "gasLimit": "500000",
+    "gasUsed": "250000",
+    "recipientDelta": "0",
+    "historicalError": {
+      "name": "EasNoAttestationReceived",
+      "args": [
+        "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C"
+      ]
+    }
+  },
+  "false-payment": {
+    "hash": "0x69f42f10fd795af26af78f717d676b1e6bba05d119e9886e786ffec706afc07b",
+    "to": "0x88efE0F72e5C095FE98a925682692D7787B5062F",
+    "status": 1,
+    "block": 19182515,
+    "gasLimit": "479003",
+    "gasUsed": "368464",
+    "recipientDelta": "1000000000000000"
+  },
+  "revoked-false-broadcast": {
+    "hash": "0x74c73e3884106f16de25b0509ea4d2ad5a2d623fea85c0f193757e59a12d2105",
+    "to": "0x88efE0F72e5C095FE98a925682692D7787B5062F",
+    "status": 0,
+    "block": 19182520,
+    "gasLimit": "500000",
+    "gasUsed": "250000",
+    "recipientDelta": "0",
+    "historicalError": {
+      "name": "EasAttestationRevoked",
+      "args": [
+        "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C"
+      ]
+    }
+  },
+  "true-payment": {
+    "hash": "0x9810ab00b4d6ec3dab6accd4aa5e2cb1c435bd1bc75a458bf8f039073b33a917",
+    "to": "0x88efE0F72e5C095FE98a925682692D7787B5062F",
+    "status": 1,
+    "block": 19182527,
+    "gasLimit": "481803",
+    "gasUsed": "370618",
+    "recipientDelta": "1000000000000000"
+  },
+  "finalPolicy": {
+    "_contract": "0x88efE0F72e5C095FE98a925682692D7787B5062F",
+    "admin": "0xC4A50f04B3eB7B95f87639d6133Db89E3cdC407C",
+    "policies": {
+      "_": {
+        "templateId": "DENYLIST_POLICY",
+        "policy": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000",
+        "selector": "0x0c11dedd"
+      }
+    }
+  },
+  "paymentCount": "4"
+}
