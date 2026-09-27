@@ -2,11 +2,12 @@
 
 | 증상 | 원인 후보 | 확인 | 해결 |
 |---|---|---|---|
+| COPY_FROM_CHEATSHEET 안내 | 실행 파일 또는 Payment.sol에 예시 주석이 남음 | 오류에 표시된 파일 경로 | VS Code에서 해당 주석 블록 전체를 예시 코드로 교체하고 저장. 01 실행 전에는 Payment.sol도 확인. 거래는 전송되지 않음 |
 | invalid private key | 예시 .env 또는 잘못된 키 | setup:account 결과 | `npm run setup:account` 재실행. 정상 .env는 보존, 잘못된 키는 입력 단계에서 교체 |
 | 셸에서 설정한 다른 계정 사용 | 환경 변수가 .env보다 우선 | 출력 지급자 주소 | 가이드의 `env -u MAROO_PRIVATE_KEY -u MAROO_RECIPIENT` 실행 명령 사용 |
 | Insufficient balance | 수수료+지급액 부족 | 테스트넷 주소 잔액 | faucet 충전, 공유 계정은 별도 계정으로 교체하되 중간 상태와 혼용 금지 |
 | 실행 순서가 다름 | 완료 파일 재실행 또는 단계 건너뜀 | state.json의 next | next=0은 01, next=1은 02. 다음 파일 실행 |
-| 이전 실행이 완료되지 않음 | 거래 처리 결과 대기 중단·RPC 실패 | in-progress.json, transactions.jsonl, Explorer | 자동 재시도 중지. 전송한 거래의 식별 번호의 거래 처리 결과부터 확인. 배포 중간 실패는 해당 주소/거래 처리 결과 기록 후 진행자와 새 실행으로 복구 |
+| 이전 실행이 완료되지 않음 | 거래 처리 결과 대기 중단·RPC 실패 | in-progress.json, transactions.jsonl, Explorer | 자동 재시도 중지. 전송한 거래 번호로 처리 결과부터 확인. 배포 중간 실패는 해당 주소/거래 처리 결과 기록 후 진행자와 새 실행으로 복구 |
 | InDenylist / status 0 | 현재 송신자 차단 | 정책과 잔액/횟수 | 04에서는 기대 결과. 마지막 복원 거래도 status 1인지 확인 |
 | Explorer decoded가 깨진 문자 | 컨트랙트가 정의한 오류를 ABI로 표시하지 못함 | 오류 식별 번호와 함께 담긴 값 | 제공 decode 사용. 원래 오류 데이터는 보존 |
 | docker-credential-desktop.exe not found | WSL PATH와 Docker credential helper 불일치 | Docker 설정의 credsStore와 helper 경로 | Docker Desktop WSL 연동/PATH 복구. 공개 이미지 확인은 인증정보 없는 작업 전용 DOCKER_CONFIG로 수행 가능 |

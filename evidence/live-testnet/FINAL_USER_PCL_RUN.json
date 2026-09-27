@@ -1,0 +1,78 @@
+{
+  "label": "Live Testnet",
+  "checkedAt": "2026-09-27T18:11:24.097Z",
+  "verification": "Read-only RPC receipt and block queries; no new transaction sent",
+  "chainId": 450815,
+  "nodeVersionReportedByUser": "v24.15.0",
+  "proxy": "0x05d397A7D92bf71AfB1aCC2A454916F48EBCE8F2",
+  "receipts": [
+    {
+      "label": "implementation",
+      "hash": "0xb747964608e38727c21662d7a21d8b91a07c205de2dc5f005bbaaa21c5046960",
+      "status": 1,
+      "block": 19257012,
+      "blockTime": "2026-09-27T17:02:09.000Z",
+      "explorer": "https://explorer-testnet.maroo.io/tx/0xb747964608e38727c21662d7a21d8b91a07c205de2dc5f005bbaaa21c5046960"
+    },
+    {
+      "label": "proxy",
+      "hash": "0xf6798f4fd28b4be5e69cea7e131ac4aa7b543b7043f434d6af696da4a0133a48",
+      "status": 1,
+      "block": 19257014,
+      "blockTime": "2026-09-27T17:02:11.000Z",
+      "explorer": "https://explorer-testnet.maroo.io/tx/0xf6798f4fd28b4be5e69cea7e131ac4aa7b543b7043f434d6af696da4a0133a48"
+    },
+    {
+      "label": "allow",
+      "hash": "0x1fe653aeb3ae277936562f907ea5744c13a77d07faf71c4d5b8dda13ec64dc45",
+      "status": 1,
+      "block": 19257083,
+      "blockTime": "2026-09-27T17:03:21.000Z",
+      "explorer": "https://explorer-testnet.maroo.io/tx/0x1fe653aeb3ae277936562f907ea5744c13a77d07faf71c4d5b8dda13ec64dc45"
+    },
+    {
+      "label": "allowed-payment",
+      "hash": "0xbfc7dbefd64c84ca3bda0374e77372309c63e212bea0dbb7de59e3c9285343e9",
+      "status": 1,
+      "block": 19257133,
+      "blockTime": "2026-09-27T17:04:12.000Z",
+      "explorer": "https://explorer-testnet.maroo.io/tx/0xbfc7dbefd64c84ca3bda0374e77372309c63e212bea0dbb7de59e3c9285343e9"
+    },
+    {
+      "label": "deny",
+      "hash": "0xb9514d115033254639b66a565fa992cdaff88839143d6be8b8874e951157361a",
+      "status": 1,
+      "block": 19257166,
+      "blockTime": "2026-09-27T17:04:45.000Z",
+      "explorer": "https://explorer-testnet.maroo.io/tx/0xb9514d115033254639b66a565fa992cdaff88839143d6be8b8874e951157361a"
+    },
+    {
+      "label": "denied-payment",
+      "hash": "0x2086224c79b7f7c263876da0078e762720b9e788363cc4aab1508a94acf8d131",
+      "status": 0,
+      "block": 19257168,
+      "blockTime": "2026-09-27T17:04:48.000Z",
+      "explorer": "https://explorer-testnet.maroo.io/tx/0x2086224c79b7f7c263876da0078e762720b9e788363cc4aab1508a94acf8d131"
+    },
+    {
+      "label": "restore-allow",
+      "hash": "0x7b4fdb924e89373064cbc564fd7a2ab144176d7d0392925c27160e585c52c56c",
+      "status": 1,
+      "block": 19257171,
+      "blockTime": "2026-09-27T17:04:50.000Z",
+      "explorer": "https://explorer-testnet.maroo.io/tx/0x7b4fdb924e89373064cbc564fd7a2ab144176d7d0392925c27160e585c52c56c"
+    }
+  ],
+  "reportedStateChanges": {
+    "source": "User-provided terminal output; balances not independently reconstructed",
+    "allowedPayment": {
+      "recipientDelta": "1000000000000000",
+      "countDelta": "1"
+    },
+    "deniedPayment": {
+      "recipientDelta": "0",
+      "countDelta": "0"
+    }
+  },
+  "scope": "User execution preceded the commented-starter change; not a fresh run of the final starter files"
+}

@@ -13,7 +13,7 @@ export async function run(index, action) {
     const sources=[process.argv[1], ...(index===0 ? [new URL('./Payment.sol',import.meta.url)] : [])];
     for(const source of sources) {
       if(readFileSync(source,'utf8').includes('/* COPY_FROM_CHEATSHEET')) {
-        throw Error('파일의 COPY_FROM_CHEATSHEET 주석 블록을 치트시트 예시 코드로 교체한 뒤 실행하세요.');
+        throw Error(`${source instanceof URL ? source.pathname : source}: COPY_FROM_CHEATSHEET부터 END_COPY */까지를 예시 코드로 교체하고 저장하세요. 거래는 전송되지 않았습니다.`);
       }
     }
     writeFileSync(lock,JSON.stringify({index,payer:wallet.address}),{flag:'wx'});
