@@ -14,7 +14,7 @@
 | [SUBMISSION_NOTES.md](SUBMISSION_NOTES.md) | 가정과 구현 범위, 검증, AI 활용, 개선 제안, 한계 |
 | [검증 결과](docs/VALIDATION.md) · [구조 설명](docs/ARCHITECTURE.md) | 실행 근거와 두 환경의 경계 |
 | [오류 해결](workshop/TROUBLESHOOTING.md) | 오류별 대응과 장애 시 대체 진행 |
-| [시연 영상](video-link.md) | **5분 촬영 완료 · 링크 등록 대기** |
+| [시연 영상 · 약 5분](https://drive.google.com/file/d/19wXo-F9KSJUR1Sc0CdO0_YuAL0zjWIKq/view) | 워크숍 소개와 PCL 지급 허용·차단 |
 
 외부 소스와 라이선스는 [출처 문서](docs/ATTRIBUTION.md)에 있습니다. 과제 요구사항별 제출 위치는 [기준 대조표](docs/SUBMISSION_CHECKLIST.md)에 정리했습니다.
 
@@ -44,4 +44,4 @@ npm test
 
 ## 남은 제출 항목
 
-시연 영상 링크 등록과 Google Slides의 외부 열람 권한 확인이 남아 있습니다. macOS 실기기 실행과 전체 70분 참가자 리허설은 미검증입니다. 상세 범위는 [Known Limitations](SUBMISSION_NOTES.md#known-limitations)에 있습니다.
+영상 링크는 등록했습니다. Google Slides의 외부 열람 권한 설정이 남아 있습니다. macOS 실기기 실행과 전체 70분 참가자 리허설은 미검증입니다. 상세 범위는 [Known Limitations](SUBMISSION_NOTES.md#known-limitations)에 있습니다.
