@@ -10,8 +10,10 @@ var factory = new ContractFactory(artifact.abi, artifact.evm.bytecode.object, wa
 var deployed = await send('implementation', await factory.getDeployTransaction());
 var implementation = deployed.contractAddress;
 var api = new Interface(artifact.abi);
+/* COPY_FROM_CHEATSHEET
 var init = coder.encode(['address','address','bytes'], [implementation,wallet.address,api.encodeFunctionData('initialize',[wallet.address])]);
 var registered = await send('proxy', await pcl.deployPclProxy.populateTransaction(1,0n,init));
+END_COPY */
 var event = registered.logs.map(l => { try { return pcl.interface.parseLog(l); } catch { return null; } }).find(e => e?.name === 'PclProxyDeployed');
 var proxy = event.args.proxy;
 var app = new Contract(proxy,artifact.abi,wallet);

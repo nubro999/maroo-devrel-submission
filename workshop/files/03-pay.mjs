@@ -6,6 +6,8 @@ await run(2, async state => {
 const {proxy,abi}=state;
 const api=new Interface(abi);
 const app=new Contract(proxy,abi,wallet);
+/* COPY_FROM_CHEATSHEET
 await payment(app,'allowed-payment',1);
+END_COPY */
 return {};
 });
