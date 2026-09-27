@@ -13,7 +13,7 @@
 | 5개 이상 오류·대체 진행 | TROUBLESHOOTING | 완료 |
 | 초기화·정리·검증 | PARTICIPANT_GUIDE·npm test | 완료 |
 | AI 가속 2개 이상·오류 수정 | SUBMISSION_NOTES / AI Usage | 완료 |
-| 개발 편의 개선 3개 이상·근거·담당 영역 | SUBMISSION_NOTES / DX Feedback | 4개 포함 |
+| 개발 편의 개선 3개 이상·근거·담당 영역 | SUBMISSION_NOTES / DX Feedback | 3개 포함 |
 | 영상 5–8분 | video-link.md | 미촬영, 추후 추가 |
 | 슬라이드 | README의 Google Slides 링크 | 자료 완료, 외부 열람 권한 확인 필요 |
 

@@ -54,7 +54,6 @@ Privacy 실행 명령은 [참가자 가이드](workshop/PARTICIPANT_GUIDE.md#pri
 |---|---|---|
 | 실제 테스트넷 실행 | 프록시 배포, 정상 지급, Denylist 거절·복원 | [실행 해시](evidence/live-testnet/FILE_LAB_REHEARSAL.json), [거래 처리 결과 재조회](evidence/live-testnet/SUBMISSION_RECEIPTS.json) |
 | Local | 예치 10 → 지급 7 → Alice 3 / Bob 7, 반복 조회 일치 | [CLI 결과](evidence/local/MANUAL_CLI_RESULT.json) |
-| 참고 실험 | EAS false/true 모두 지급 통과 | [실험](evidence/live-testnet/EAS_BOOLEAN_RESULT.json). 본 실습에서는 제외 |
 | 테스트넷 실행 미검증 | Maroo 테스트넷에서 비공개 지급을 실행하기 위한 증명 자료와 입력 준비 방법을 확보하지 못함 | [경계](docs/ARCHITECTURE.md) |
 
 [정상 지급 거래](https://explorer-testnet.maroo.io/tx/0x00b3322342c0fcf113d5833e6100d1efa505988733cfbd7594665911460a787a) · [차단 거래](https://explorer-testnet.maroo.io/tx/0x022a0b263b022ee75b76bc6ece42f84143d5c102f5c5f506dae96b445b674f43)
