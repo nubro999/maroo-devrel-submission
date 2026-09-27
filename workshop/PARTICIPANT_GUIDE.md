@@ -1,6 +1,6 @@
 # 참가자 가이드
 
-카페 A가 원두업체 B에 지급합니다. PCL은 Maroo 테스트넷, Privacy는 별도 Clairveil 로컬에서 실행합니다. 두 경로를 하나의 온체인 통합 거래로 구현한 것은 아닙니다.
+카페 A가 원두업체 B에 지급합니다. PCL은 Maroo 테스트넷, Privacy는 내 컴퓨터의 별도 Clairveil 환경에서 실행합니다. 두 경로를 하나의 체인에 기록된 통합 거래로 구현한 것은 아닙니다.
 
 ## 환경 준비
 
@@ -19,9 +19,9 @@ Node 22.14 이상/24와 오프라인 검증 PASS가 기준입니다. Privacy용 
 
 | 파일 | 동작 | 결과 |
 |---|---|---|
-| `workshop/files/Payment.sol` | owner·양수 금액·프록시 호출 검사 후 지급 | 지급 로직 예시 |
+| `workshop/files/Payment.sol` | 지급 권한·0보다 큰 금액·프록시를 통한 요청인지 확인 후 지급 | 지급 로직 예시 |
 | `01-deploy.mjs` | 구현체·등록 프록시 배포 | proxy 주소 |
-| `02-allow.mjs` | pay 함수의 빈 Denylist 설정 | 차단 주소 없음 |
+| `02-allow.mjs` | pay 함수의 빈 차단 목록 설정 | 차단 주소 없음 |
 | `03-pay.mjs` | 카페 A → 원두업체 B에 0.001 tOKRW | status 1, 잔액·횟수 증가 |
 | `04-deny.mjs` | 송신자 차단·재요청·정책 복원 | InDenylist, status 0, 잔액·횟수 불변 |
 
@@ -32,11 +32,11 @@ env -u MAROO_PRIVATE_KEY -u MAROO_RECIPIENT node --env-file=.env workshop/files/
 env -u MAROO_PRIVATE_KEY -u MAROO_RECIPIENT node --env-file=.env workshop/files/04-deny.mjs
 ```
 
-상태: `.private/file-lab/state.json`. 거래 기록: `.private/terminal/transactions.jsonl`. 출력의 status 0은 차단 예시에서 기대하는 결과입니다. 예외로 종료되면 다음 파일로 진행하지 않습니다. `in-progress.json`이 남아 있으면 영수증 확인 전 같은 거래를 다시 보내지 않습니다.
+상태: `.private/file-lab/state.json`. 거래 기록: `.private/terminal/transactions.jsonl`. 출력의 status 0은 차단 예시에서 기대하는 결과입니다. 예외로 종료되면 다음 파일로 진행하지 않습니다. `in-progress.json`이 남아 있으면 거래 처리 결과 확인 전 같은 거래를 다시 보내지 않습니다.
 
 ## Privacy
 
-Alice=카페 A, Bob=원두업체 B. 예치 10 → 지급 7 → note 잔액 3/7을 확인합니다. 단위는 로컬 uclair입니다. 예치는 공개이며 노드 초기화·증명 자료는 개발용입니다.
+Alice=카페 A, Bob=원두업체 B. 예치 10 → 지급 7 → 비공개 잔액 3/7을 확인합니다. 단위는 로컬 uclair입니다. 예치는 공개이며 노드 초기화·증명 자료는 개발용입니다.
 
 Docker Desktop(macOS) 또는 Docker Engine(Linux), 메모리 8GB 이상 권장. 아래 환경 준비와 노드 시작은 수업 전 완료합니다. macOS 실기기 전체 실행은 미검증입니다.
 
@@ -92,7 +92,7 @@ TRANSFER_TX=$(sed -n '/^{/,$p' /results/transfer.json | python3 -c 'import json,
 "$BIN" query tx "$TRANSFER_TX" --node "$RPC" --output json
 ```
 
-### note 잔액 조회 · 컨테이너 B
+### 비공개 잔액 조회 · 컨테이너 B
 
 ```bash
 "$BIN" tx privacy list-notes --from alice "${COMMON[@]}" --json > /results/alice-after.json
@@ -109,10 +109,10 @@ print('PASS: Alice 3 / Bob 7 / repeat scan stable')
 CHECK
 ```
 
-예치·지급 거래의 포함 결과는 code 0입니다. 마지막 조회는 `PASS: Alice 3 / Bob 7 / repeat scan stable`을 출력합니다. 거래가 조회되지 않으면 query만 다시 실행합니다. 전송 명령은 반복하지 않습니다.
+예치·지급 거래의 블록에 기록된 실행 결과는 code 0입니다. 마지막 조회는 `PASS: Alice 3 / Bob 7 / repeat scan stable`을 출력합니다. 거래가 조회되지 않으면 query만 다시 실행합니다. 전송 명령은 반복하지 않습니다.
 
 ## 초기화·종료
 
-PCL 마지막 단계는 빈 차단 목록을 복원합니다. 재실습은 이전 모든 거래의 영수증과 복원 완료를 확인한 뒤 `.private/file-lab`을 다른 이름으로 옮겨 새 배포로 시작합니다. 기존 체인 컨트랙트는 삭제되지 않습니다. 중간 실패는 [오류 해결](TROUBLESHOOTING.md)을 따릅니다.
+PCL 마지막 단계는 빈 차단 목록을 복원합니다. 재실습은 이전 모든 거래의 거래 처리 결과과 복원 완료를 확인한 뒤 `.private/file-lab`을 다른 이름으로 옮겨 새 배포로 시작합니다. 기존 체인 컨트랙트는 삭제되지 않습니다. 중간 실패는 [오류 해결](TROUBLESHOOTING.md)을 따릅니다.
 
-Privacy는 터미널 B에서 `exit`, A에서 `Ctrl+C` 후 `exit`로 종료합니다. 컨테이너는 삭제되지만 bind mount의 기록과 cache volume은 유지됩니다. 재실습은 준비 명령의 새 session 디렉터리로 초기화합니다. `.private` 안의 키·note·witness·원본 로그는 공유하지 않습니다.
+Privacy는 터미널 B에서 `exit`, A에서 `Ctrl+C` 후 `exit`로 종료합니다. 컨테이너는 삭제되지만 컴퓨터에 연결해 둔 기록과 Docker의 빌드 저장 공간은 유지됩니다. 재실습은 준비 명령의 새 session 디렉터리로 초기화합니다. `.private` 안의 키·비공개 잔액 기록·증명 입력 데이터·원본 로그는 공유하지 않습니다.
