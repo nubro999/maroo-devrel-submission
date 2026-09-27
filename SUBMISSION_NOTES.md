@@ -69,13 +69,15 @@ npm run secrets:check
 
 `npm test`에서는 코드 문법과 컴파일뿐 아니라 잘못된 예시 개인키의 처리, 정상 계정 설정 보존, 실습 순서를 건너뛰었을 때 거래 전송을 막는 동작을 검사했습니다. `npm audit`에서는 검사 시점에 보고된 취약점이 0건이었습니다. 이는 운영 환경의 보안 감사를 완료했다는 의미는 아닙니다.
 
-제출 정리 과정에서는 새로 송금하지 않고, 기존 PCL 거래 7개의 처리 결과를 다시 조회했습니다. 따라서 저장된 거래 기록은 앞서 수행한 실행의 증거입니다. 정리한 제출본을 새 지갑으로 처음부터 다시 실행했다고 주장하지 않습니다. [거래 재조회 결과](evidence/live-testnet/SUBMISSION_RECEIPTS.json)와 [제출본 검증 문서](docs/VALIDATION.md)에서 확인할 수 있습니다.
+제출 정리 과정에서는 새로 송금하지 않고, 기존 PCL 거래 7개의 처리 결과를 다시 조회했습니다. 따라서 저장된 거래 기록은 앞서 수행한 실행의 증거입니다. 정리한 제출본을 새 지갑으로 처음부터 다시 실행했다고 주장하지 않습니다. [거래 재조회 결과](evidence/live-testnet/SUBMISSION_RECEIPTS.json)에서 확인할 수 있습니다.
 
 Node 24.15.0에서 직접 실행한 최근 PCL 거래도 [별도 기록](evidence/live-testnet/FINAL_USER_PCL_RUN.json)으로 남겼습니다. 거래 상태와 블록 시각은 RPC로 재조회했으며, 잔액 변화는 실행 당시 터미널에 출력된 값을 기록했습니다. 이 실행은 핵심 코드를 주석 처리하기 전 버전입니다.
 
 ### 직접 실행한 내용과 아직 확인하지 못한 내용
 
 직접 실행한 것은 Maroo 테스트넷의 PCL 지급 통제와 내 컴퓨터의 Clairveil 비공개 지급입니다. Maroo Privacy는 공개 정보를 조회했지만 정상적인 비공개 지급까지 실행하지 못했습니다. 감사자가 권한에 따라 거래 정보를 열어 보는 기능도 직접 검증하지 않았습니다. 관련 구조 설명을 실제 실행 결과로 제시하지 않습니다.
+
+추가 실행 이력은 [초기 테스트넷 실행](evidence/live-testnet/FILE_LAB_REHEARSAL.json), [이전 직접 실행](evidence/live-testnet/USER_PCL_RUN.json), [의존성 검사](evidence/DEPENDENCY_AUDIT.json)에 보관했습니다. 이전 PowerShell 실행 기록은 이력이며, 현재 참가자 안내는 macOS·Linux 기준입니다. 제출 자료의 내부 링크와 실습 사이트의 코드 복사·모바일 표시도 확인했습니다.
 
 ## AI Usage
 

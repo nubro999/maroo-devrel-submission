@@ -12,11 +12,10 @@
 | [실습 사이트](https://maroo-workshop-cheatsheet.vercel.app/) · [참가자 가이드](workshop/PARTICIPANT_GUIDE.md) | 실행 순서, 예시 코드, 복사할 명령 |
 | [진행자 가이드](workshop/FACILITATOR_GUIDE.md) | 시간 배분, 발표 메모, 토론 질문 |
 | [SUBMISSION_NOTES.md](SUBMISSION_NOTES.md) | 가정과 구현 범위, 검증, AI 활용, 개선 제안, 한계 |
-| [검증 결과](docs/VALIDATION.md) | 실행 근거와 검증 범위 |
 | [오류 해결](workshop/TROUBLESHOOTING.md) | 오류별 대응과 장애 시 대체 진행 |
 | [시연 영상 · 약 5분](https://drive.google.com/file/d/19wXo-F9KSJUR1Sc0CdO0_YuAL0zjWIKq/view) | 워크숍 소개와 PCL 지급 허용·차단 |
 
-외부 소스와 라이선스는 [출처 문서](docs/ATTRIBUTION.md)에 있습니다. 과제 요구사항별 제출 위치는 [기준 대조표](docs/SUBMISSION_CHECKLIST.md)에 정리했습니다.
+외부 소스와 라이선스는 [출처 문서](docs/ATTRIBUTION.md)에 있습니다.
 
 ## 구현 및 검증 범위
 
