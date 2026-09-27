@@ -6,7 +6,7 @@
 | 실행 가능한 OKRW/PCL 경로 | [PCL 실행 파일](../workshop/files) | 실제 실행 증거·예시 코드 컴파일 검사 |
 | Privacy 예치부터 수취 확인까지 | [Privacy 실행 안내](../workshop/PARTICIPANT_GUIDE.md#privacy) | 로컬 CLI 실행 증거 포함 |
 | live 상태 변경 증거 | [테스트넷 기록](../evidence/live-testnet) | 최근 참가자 거래 7건 재조회 |
-| 버전·환경·한계 구분 | [제출 노트](../SUBMISSION_NOTES.md) · [구조](ARCHITECTURE.md) | 완료 |
+| 버전·환경·한계 구분 | [제출 노트](../SUBMISSION_NOTES.md) | 완료 |
 | 60–75분 워크숍 | [70분 진행안](../workshop/FACILITATOR_GUIDE.md) | 설계 완료, 전체 시간 리허설 미측정 |
 | 참가자 가이드·성공 기준 | [참가자 가이드](../workshop/PARTICIPANT_GUIDE.md) | 완료 |
 | 토론 질문·후속 검토 | [진행자 가이드](../workshop/FACILITATOR_GUIDE.md) | 슬라이드·참가자 가이드에 4개 질문, 진행자 가이드에 답변 방향 포함 |
