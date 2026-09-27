@@ -10,7 +10,7 @@
 | 사용자 실행 | [USER_PCL_RUN](../evidence/live-testnet/USER_PCL_RUN.json). 이전 PowerShell 실행 기록이며 현재 참가자 가이드는 macOS/Linux |
 | 로컬 Privacy | [MANUAL_CLI_RESULT](../evidence/local/MANUAL_CLI_RESULT.json): deposit/transfer code 0, 비공개 잔액 3/7, 반복 조회 결과 일치 |
 | 환경 분리 | 로컬 Privacy 해시는 Maroo Explorer에서 조회되지 않음 |
-| 미검증 | macOS 실기기, 전체 70분 리허설, Maroo 테스트넷의 정상 비공개 지급, 감사자의 거래 정보 열람, 영상 |
+| 미검증 | macOS 실기기, 전체 70분 리허설, Maroo 테스트넷의 정상 비공개 지급, 감사자의 거래 정보 열람, 영상 내용·실제 재생 길이 |
 
 원래 파일 예시의 PCL 01–04를 실제 테스트넷에서 실행했습니다. 제출 정리본은 같은 Solidity/정책 호출을 사용하며, 하위 패키지 변경 후에도 컴파일 결과가 같은지 확인했습니다. 제출 정리 과정에서는 거래를 다시 보내지 않았습니다.
 

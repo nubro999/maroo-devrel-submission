@@ -8,7 +8,7 @@
 
 | 자료 | 내용 |
 |---|---|
-| [Google Slides · 13장](https://docs.google.com/presentation/d/12lcnMRimrosbLEd8PpE40ZvFPl7kivfFuo4TcTB2CXc/edit) | 발표 자료와 구조 다이어그램 |
+| [Google Slides · 16장](https://docs.google.com/presentation/d/12lcnMRimrosbLEd8PpE40ZvFPl7kivfFuo4TcTB2CXc/edit) | 발표 자료와 구조 다이어그램 |
 | [실습 사이트](https://maroo-workshop-cheatsheet.vercel.app/) · [참가자 가이드](workshop/PARTICIPANT_GUIDE.md) | 실행 순서, 예시 코드, 복사할 명령 |
 | [진행자 가이드](workshop/FACILITATOR_GUIDE.md) | 시간 배분, 발표 메모, 토론 질문 |
 | [SUBMISSION_NOTES.md](SUBMISSION_NOTES.md) | 가정과 구현 범위, 검증, AI 활용, 개선 제안, 한계 |

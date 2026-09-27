@@ -9,7 +9,7 @@
 | 버전·환경·한계 구분 | [제출 노트](../SUBMISSION_NOTES.md) · [구조](ARCHITECTURE.md) | 완료 |
 | 60–75분 워크숍 | [70분 진행안](../workshop/FACILITATOR_GUIDE.md) | 설계 완료, 전체 시간 리허설 미측정 |
 | 참가자 가이드·성공 기준 | [참가자 가이드](../workshop/PARTICIPANT_GUIDE.md) | 완료 |
-| 토론 질문·후속 검토 | [진행자 가이드](../workshop/FACILITATOR_GUIDE.md) | 진행자용으로 포함 |
+| 토론 질문·후속 검토 | [진행자 가이드](../workshop/FACILITATOR_GUIDE.md) | 슬라이드·참가자 가이드에 4개 질문, 진행자 가이드에 답변 방향 포함 |
 | 5개 이상 오류·대체 진행 | [오류 해결](../workshop/TROUBLESHOOTING.md) | 완료 |
 | 초기화·정리·검증 | [참가자 가이드](../workshop/PARTICIPANT_GUIDE.md) · npm test | 완료 |
 | AI 가속 2개 이상·오류 수정 | [AI Usage](../SUBMISSION_NOTES.md#ai-usage) | 완료 |
