@@ -4,7 +4,17 @@
 
 ## 환경 준비
 
-[README 설치 명령](../README.md#실행)을 실행합니다. `npm run setup:account`에서 사이트의 테스트 개인키 또는 별도 충전된 실습 계정을 설정합니다. .env는 로컬 파일입니다.
+macOS/Linux의 Bash 또는 zsh, Node 22.14 이상/24, Git이 필요합니다. Windows에서는 WSL2를 사용합니다.
+
+```bash
+git clone https://github.com/nubro999/maroo-devrel-submission.git
+cd maroo-devrel-submission
+npm ci
+npm run setup
+npm run setup:account
+```
+
+`npm run setup:account`에서 실습 사이트의 테스트 개인키 또는 별도로 충전한 실습 계정을 설정합니다. 정상적인 기존 `.env`는 유지하고, 예시 개인키는 입력받은 값으로 교체합니다. 공개 실습 계정은 다른 사람도 사용할 수 있으므로 잔액과 독점 사용을 보장하지 않습니다. 이후 명령은 모두 저장소 폴더에서 실행합니다.
 
 ```bash
 node --version
